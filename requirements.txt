@@ -1,0 +1,13 @@
+flask
+python-dotenv
+pillow
+numpy
+torch
+torchvision
+transformers
+qdrant-client
+elasticsearch
+boto3
+requests
+werkzeug
+jupyter
