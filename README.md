@@ -50,8 +50,6 @@ This project addresses that problem using a multimodal RAG pipeline:
 | `Extracting_Images_InsertingData.ipynb` | Notebook for extracting/cropping images and preparing ingestion data. |
 | `Qdrant.ipynb` | Notebook for generating image vectors and inserting them into Qdrant. |
 | `Append.ipynb` | Notebook for appending/indexing text chunks into Elasticsearch. |
-| `report.pdf` | Technical report describing the system design, deployment, database structure, diagrams, workflow, and evaluation. |
-
 Recommended cleaned file names before publishing:
 
 ```text
