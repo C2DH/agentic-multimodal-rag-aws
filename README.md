@@ -268,29 +268,3 @@ Strict accuracy counts only correct answers. Weighted accuracy gives full credit
 The evaluation should be interpreted as an initial practical assessment, not a final benchmark. The dataset was built manually because no gold-standard dataset existed for this archive collection.
 
 ---
-
-## Security Notes Before Publishing
-
-Before pushing this project to GitHub:
-
-- Remove all real passwords from notebooks and source code.
-- Do not commit `.env`, AWS credentials, local data folders, uploaded images, logs, vector database snapshots, or Elasticsearch data.
-- Clear notebook outputs if they contain local paths, screenshots, credentials, debug traces, or server details.
-- Replace real service credentials with `.env.example`.
-- Review screenshots in the report and blur any account IDs, IAM usernames, MFA warnings, access-key areas, or permission details.
-- Consider making the repository private if it includes archive material or infrastructure screenshots.
-
-A sensitive value was found in the uploaded notebooks during review: a hardcoded Elasticsearch password. Replace it with `os.environ.get("ES_PASSWORD")` before publishing.
-
----
-
-## Limitations
-
-- CLIP ViT-B/32 is a general-purpose embedding model and may not fully capture historical archive semantics.
-- OCR or PDF text extraction errors can reduce Elasticsearch retrieval quality.
-- Visually similar images can belong to different historical contexts.
-- External knowledge may introduce unrelated facts if entity detection is uncertain.
-- The local repository used for evaluation was limited in size.
-- The system was intentionally built with a cost-effective model configuration.
-
----
